@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Sender</title>
+<script>
+function sendEmail() {
+    var recipient = "recipient@example.com"; // Change this to your recipient email address
+    var subject = "Subject of the email"; // Change this to your email subject
+    var body = "Body of the email"; // Change this to your email body
+
+    window.location.href = "mailto:" + recipient + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+}
+</script>
+</head>
+<body>
+
+<!-- Link to send email -->
+<a href="javascript:void(0);" onclick="sendEmail()">Send Email</a>
+
+</body>
+</html>

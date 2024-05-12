@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Location</title>
+<style>
+/* Set the size of the map */
+#map {
+  height: 400px; /* Adjust height as needed */
+  width: 100%; /* Adjust width as needed */
+}
+</style>
+</head>
+<body>
+
+<!-- Map container -->
+<div id="map"></div>
+
+<!-- Include the Google Maps JavaScript API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+<script>
+// Initialize and display the map
+function initMap() {
+  // Specify the latitude and longitude of your location
+  var myLocation = {lat: 40.7128, lng: -74.0060}; // Example: New York City
+
+  // Create a map centered at your location
+  var map = new google.maps.Map(
+    document.getElementById('map'), {zoom: 12, center: myLocation});
+
+  // Add a marker at your location
+  var marker = new google.maps.Marker({position: myLocation, map: map});
+}
+</script>
+
+<!-- Call the initMap() function to initialize the map -->
+<script>
+initMap();
+</script>
+
+</body>
+</html>
